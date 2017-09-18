@@ -7,7 +7,7 @@ PieBot is a Discord bot bla bla bla. *I need an actual description*.
 # What Is PieBot running?
 Smh nerd, it's *~~running on a wheel~~* using Discord.JS *(https://discord.js.org/)*, a Node module *(https://nodejs.org/)*.
 # I need help!
-Just DM me *(Pie#9196)* on Discord, Twitter *(https://www.twitter.com/discordpiebot)*, Facebook *(https://www.facebook.com/discordpiebot)*, join the Discord Server *()* or DM one of the Devs.
+Just DM me *(Pie#9196)* on Discord, Twitter *(https://www.twitter.com/discordpiebot)*, Facebook *(https://www.facebook.com/discordpiebot)*, join the Discord Server *(https://discord.gg/PXAuQyG)* or DM one of the Devs.
 # WHY IS THERE SO MANY GOD DAMN BUGS?
 We are currently fixing the bugs including the music queue bug. Just wait. To report a bug, just do p.contact and the bug issue and I shall respond soon.
 # How can I join the Dev Team?
@@ -15,7 +15,7 @@ Simple as doing "p.dev", that's it!
 # When will PieBot have nsfw commands?
 NEVER. I will never add nsfw commands. So please stop asking for commands like p.ornhub. Just stop. It's a no.
 # Want to give us ideas?
-Either send the idea via p.contact or suggest it in "PieBot's Oven" which you can join here: *add discord invite link*
+Either send the idea via p.contact or suggest it in "PieBot's Oven" which you can join here: https://discord.gg/PXAuQyG
 # Why did you name it PieBot anyways?
 Because I noticed that there was no bot called PieBot in all of the discord bot lists, so guess what... I made it!
 # Who is the creator?
