@@ -1,5 +1,5 @@
 # PieBotCode.
-This is the open source code for the very unknown Discord Bot "PieBot".
+This is the open source code for the very unknown Discord Bot "PieBot". Don't try to self host.
 # Can I just steal any of this code?
 No. Many people have worked on this bot for months now. Just no. Ask us before copying and pasting the code. We will have a license added soon to protect the code.
 # So what is "PieBot"?
