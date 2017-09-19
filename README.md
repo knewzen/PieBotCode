@@ -6,6 +6,9 @@ No. Many people have worked on this bot for months now. Just no. Ask us before c
 PieBot is a Discord bot bla bla bla. *I need an actual description*.
 # What Is PieBot running?
 Smh nerd, it's *~~running on a wheel~~* using Discord.JS *(https://discord.js.org/)*, a Node module *(https://nodejs.org/)*.
+# How can I invite it?
+Just click dat link.
+https://discordapp.com/oauth2/authorize?response_type=code&client_id=288221668290068480&scope=bot&permissions=2146827519&redirect_uri=https%3A%2F%2Fthefallingpie.github.io%2Fdiscordpiebot%2Finvited
 # I need help!
 Just DM me *(Pie#9196)* on Discord, Twitter *(https://www.twitter.com/discordpiebot)*, Facebook *(https://www.facebook.com/discordpiebot)*, join the Discord Server *(https://discord.gg/PXAuQyG)* or DM one of the Devs.
 # WHY IS THERE SO MANY GOD DAMN BUGS?
