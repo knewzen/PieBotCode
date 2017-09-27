@@ -1,0 +1,11 @@
+const Discord = require('discord.js');
+exports.run = function(client, message) {
+var response = ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Chicken_Pie.JPG/438px-Chicken_Pie.JPG', 'https://s-media-cache-ak0.pinimg.com/736x/26/d9/7a/26d97aee4ae99df48bad5398739ae74f.jpg', 'https://s3.amazonaws.com/user-media.venngage.com/310490-a93088016c118ea4088e4cd841962dd2.jpg', 'http://www.villagepiemaker.com/images/pie-icon.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097619583074304/6655-3-large.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097635726819330/Z.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097814093660160/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097831579713536/2Q.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097844376666112/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097856414187521/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097879961141251/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097918506926080/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097954364030976/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303097988715249664/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303098019644178433/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303098044658876428/images.png', 'https://cdn.discordapp.com/attachments/280976585719545856/303098064082829314/images.png', 'https://cdn.discordapp.com/attachments/292205020403728384/309281358583169025/2017-05-03-12-53-20-397298139.jpg', 'https://giphy.com/gifs/pie-pi-day-lcEktA2AJUqDm', 'https://giphy.com/gifs/spike-tom-and-jerry-IUnQIGt0bSoyA', 'https://giphy.com/gifs/aardman-animation-yummy-3oriNMME3Et5tb9scw', 'https://giphy.com/gifs/food-lol-wtf-3o6Zt3c1rJQ5vxqA7u', 'https://giphy.com/gifs/food-dessert-pie-CgrDSeKJMFTY4'];
+            const embed = new Discord.RichEmbed()
+            .setColor(0x00AE86)
+            .setTimestamp()
+            .addField('A Pie!', 'Delicious!')
+            .setImage(response[~~(Math.random() * response.length)])
+            .setFooter(`Pied by ${message.author.username}`)
+            return message.channel.send({embed});
+}
