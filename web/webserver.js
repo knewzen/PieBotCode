@@ -18,7 +18,7 @@ module.exports = function(config, client) {
     gclient = client;
     var usercount = 0;
 
-    String.prototype.replaceAll = function (search, replacement) {
+    String.prototype.replaceAll = function(search, replacement) {
         let target = this;
         return target.replace(new RegExp(search, 'g'), replacement);
     };
@@ -29,24 +29,24 @@ module.exports = function(config, client) {
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, 'static')))
     app.use(minifyHTML({
-        override:      true,
+        override: true,
         exception_url: false,
         htmlMinifier: {
-            removeComments:            true,
-            collapseWhitespace:        true,
+            removeComments: true,
+            collapseWhitespace: true,
             collapseBooleanAttributes: true,
-            removeAttributeQuotes:     true,
-            removeEmptyAttributes:     true,
-            minifyJS:                  true
+            removeAttributeQuotes: true,
+            removeEmptyAttributes: true,
+            minifyJS: true
         }
     }));
 
     http.createServer(app).listen(config.port, (err) => {
-            if (err) {
-                console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
-                return;
-            }
-            console.info(`Successfully started server.. listening on port ${config.port}`);
+        if (err) {
+            console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
+            return;
+        }
+        console.info(`Successfully started server.. listening on port ${config.port}`);
 })
 
     app.get("/", (req, res) => {
@@ -101,11 +101,7 @@ module.exports = function(config, client) {
             res.render('error', {
             error_code: 500,
             error_text: "Why did you go to this URL? Normally an error message will be displayed here.",
-            title: 'Error',
-            support: config.support,
-            beta: config.beta,
-            user: client.user,
-            gradient: config.gradient
+            title: 'Error'
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -119,11 +115,7 @@ module.exports = function(config, client) {
             res.render('error', {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
-                title: 'Error',
-                support: config.support,
-                beta: config.beta,
-                user: client.user,
-                gradient: config.gradient
+                title: 'Error'
             })
         } catch (err) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
@@ -139,21 +131,13 @@ function renderErrorPage(req, res, err, client) {
         res.render('error', {
             error_code: 500,
             error_text: err,
-            title: 'Error',
-            support: config.support,
-            beta: config.beta,
-            user: client.user,
-            gradient: config.gradient
+            title: 'Error'
         })
     } else {
         res.render('error', {
             error_code: 500,
             error_text: errorText,
-            title: 'Error',
-            support: config.support,
-            beta: config.beta,
-            user: client.user,
-            gradient: config.gradient
+            title: 'Error'
         })
     }
 }
