@@ -9,5 +9,5 @@ module.exports = client => {
     .setColor(0x00FF00)
   .addField(`Shard ${[Math.floor(client.shard.id + 1)]}/4`, `I am now online on ${client.guilds.size} servers with ${client.users.size} users!`)
   .setTimestamp()
-client.users.get('265071448182358018').send({embed});
+//client.users.get('265071448182358018').send({embed});
 };
