@@ -2,5 +2,5 @@
   "token": "ded",
   "port": "8080",
   "url": "http://discordpiebot.tk",
-  "invitelink": ""
+  "invitelink": "https://discordapp.com/oauth2/authorize?client_id=288221668290068480&scope=bot&permissions=2146827519"
 }
