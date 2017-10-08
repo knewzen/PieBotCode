@@ -1,46 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pie Discord Bot</title>
-    <link rel="stylesheet" type="text/css" href="/css/bulma.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-<body>
-<section class="hero is-warning is-halfheight piebot-banner">
-    <div class="hero-body">
-        <div class="container">
-        <h1 class="title is-1">
-            <span style="font-weight: 300">Pie</span>Bot
-        </h1>
-        </div>
-    </div>
-</section>
-<section class="hero is-dark is-bold is-small">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <p class="title"><strong>Bot Information</strong></p>
-            <br>
-
-            <nav class="columns">
-                <div class="column">
-                    <p class="heading"><strong>Total Servers</strong></p>
-                    <p class="title is-2 counter" class="counter" data-count="<%- guildamount %>">0</p>
+    <head>
+        <% include ./partials/headInfo %>
+    </head>
+    <body>
+        <section class="hero is-dark is-halfheight piebot-banner">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-1">
+                        <span style="font-weight: 300">Pie</span>Bot
+                    </h1>
+                    <h1 class="subtitle is-4">
+                        <%- description %>
+                    </h1>
                 </div>
+            </div>
+        </section>
+        <section class="hero is-dark stats-banner is-small">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title"><strong>Bot Information</strong></p>
+                    <br>
+                    <nav class="columns">
+                        <div class="column">
+                            <p class="heading"><strong>Total Servers</strong></p>
+                            <p class="title is-2 counter" class="counter" data-count="<%- guildamount %>">0</p>
+                        </div>
 
-                <div class="column">
-                    <p class="heading"><strong>Total Users</strong></p>
-                    <p class="title is-2 counter" data-count="<%- useramount %>">0</p>
-                </div>
+                        <div class="column">
+                            <p class="heading"><strong>Total Users</strong></p>
+                            <p class="title is-2 counter" data-count="<%- useramount %>">0</p>
+                        </div>
 
-                <div class="column">
-                    <p class="heading"><strong>Instance Uptime</strong></p>
-                    <p class="title is-2"><%- botuptime %></p>
+                        <div class="column">
+                            <p class="heading"><strong>Instance Uptime</strong></p>
+                            <p class="title is-2"><%- botuptime %></p>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
-    </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="/js/count.js"></script>
-</body>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container has-text-centered">
+                <h1 class="title" style="font-weight: 500;">Why does anyone want this junk?</h1>
+                <p>
+                    Like really, who even wants this dumb bot, it can play music and do stuff like that but who wants it, really?
+                    You can invite him but you don't have to.
+                </p>
+                <br>
+                <br>
+                <h1 class="title is-4">All the terrible things this awfull bot can do!</h1>
+                <br>
+                <div class="columns">
+                    <div class="column is-3"></div>
+                    <div class="column">
+                    <div align="center" class="box" style="background-color: #363636;color:whitesmoke;width: 70%">
+                        <h2 class="title is-4 has-text-light">Image Commands</h2>
+                        p.invert | inverts a picture<br>
+                        p.iliketrains | I like trains.<br>
+                        p.rickroll | Never gives you up.<br>
+                        p.dab | Dab on those Pie's.<br>
+                        p.bird | pics of birds<br>
+                        p.birb | pics of birbs<br>
+                        p.jpeg | pixelates pictures for ya<br>
+                        p.grandayy | puts the grandayy watermark over your images so then he can steal it<br>
+                        p.fish | swim<br>
+                        p.andnowthis | wow<br>
+                        p.grapefruit | pics of grapefruit<br>
+                        p.catto | pics of cats<br>
+                        p.chicken | pics of chicken<br>
+                        p.doggo | shows you a pic of a doggo<br>
+                        p.vuuf | Vuuf<br>
+                        p.vuuuf | VUUUF.<br>
+                        p.pie | comes up with a pic of a pie cause why not<br>
+                        <br>
+                        <h2 class="title is-4 has-text-light">Audio commands</h2>
+                        p.radio | streams radio stations<br>
+                        p.play | plays songs<br>
+                        p.skip | Skips a song<br>
+                        <br>
+                        <h2 class="title is-4 has-text-light">Fun Commands</h2>
+                        p.tip | gives you a tip<br>
+                        p.roast | you can roast yourself or another person<br>
+                        p.1v1 &lt;@user&gt; OR just p.1v1 | you can 1v1 pie or a person.<br>
+                        p.net | throws a net at someone<br>
+                        p.im | hi keemstar, im pie!<br>
+                        p.eat | eat me or another member<br>
+                        p.catchmeoutside | the first command which was made<br>
+                        p.summon pie | I dunno why<br>
+                        p.idk | idk<br>
+                        p.pingpie | why did i add this again?<br>
+                        p.8ball | it could be possible Pie#9196<br>
+                        p.rate | I would rate Jeff 4/20<br>
+                        <br>
+                        <h2 class="title is-4 has-text-light">Story time</h2>
+                        p.lemon | a story<br>
+                        p.luckayy | another story<br>
+                        <br>
+                        <h2 class="title is-4 has-text-light">Some stuff</h2>
+                        p.github | links you to the github.<br>
+                        p.nasty | idk.<br>
+                        p.helpme | gives you this list.<br>
+                        p.report | reports nasty bugs and suggestions<br>
+                        p.avatar | shows your avatar or others<br>
+                        p.info | some basic info about the bot<br>
+                        p.ping | pings dat and this<br>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- Links Inspired by GAwesomeBot -->
+        <section class="hero is-small is-black">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="has-text-centered">
+                        <p class="hero-buttons">
+                            <a class="button is-primary is-large" href="/add" style="background-color: #009688;">
+                                &nbsp;&nbsp;This may be good after all!&nbsp;&nbsp;
+                            </a>
+                        </p>
+                        <p class="hero-buttons">
+                            <a class="button is-dark is-medium" href="https://discord.gg/EZs222S" style="background-color: #7289da;">
+                                Discord
+                            </a>
+                            <a class="button is-light is-medium" href="https://github.com/PieBotDevs/PieBotCode" style="background-color: #fafafa;">
+                                GitHub
+                            </a>
+                            <a class="button is-info is-medium" href="https://www.twitter.com/discordpiebot" style="background-color: #1da1f2;">
+                                Twitter
+                            </a>
+                        </p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </section>
+        <% include ./partials/footer %>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/count.js"></script>
+    </body>
 </html>

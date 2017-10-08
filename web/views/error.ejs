@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pie Discord Bot</title>
-    <link rel="stylesheet" type="text/css" href="/css/bulma.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-<body>
-<section class="hero is-danger is-bold is-halfheight">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title is-1">
-                <span style="font-weight: 300">Error</span>&nbsp;<%- error_code %>
-            </h1>
-        </div>
-    </div>
-</section>
-<section class="hero is-dark is-bold is-small">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <p class="title is-6"><%- error_text %></p>
-        </div>
-    </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="/js/count.js"></script>
-</body>
+    <head>
+        <% include ./partials/headInfo %>
+    </head>
+    <body>
+        <section class="hero is-danger is-bold is-halfheight">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-1">
+                        <span style="font-weight: 300">Error</span>&nbsp;<%- error_code %>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-dark is-bold is-halfheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-2" style="font-weight: 400">Uh-oh :(</h1>
+                    <br>
+                    <p class="title is-6"><%- error_text %></p>
+                    <br>
+                    <br>
+                    <a href="/" class="button is-light is-outlined">
+                        Take me home!
+                    </a>
+                </div>
+            </div>
+        </section>
+        <% include ./partials/footer %>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/count.js"></script>
+    </body>
 </html>

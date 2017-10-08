@@ -1,3 +1,9 @@
 .piebot-banner {
     background-image: linear-gradient(141deg, #ffb200 0%, #a37210 100%);
 }
+.stats-banner {
+    background-image: linear-gradient(141deg, rgba(31, 25, 26, 1) 0%, rgba(54, 54, 54, 0.75) 71%, rgba(70, 64, 63, 0.60) 100%),url('/img/heroBanner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

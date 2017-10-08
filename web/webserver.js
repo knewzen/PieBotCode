@@ -75,6 +75,8 @@ module.exports = function(config, client) {
         botuptime: format(uptime),
         guildamount: /*guildcount*/client.guilds.size,
         useramount: /*usercount*/client.users.size,
+        description: "The bot noone wanted",
+        url: config.url
     })
 } catch (err) {
         renderErrorPage(res, err, client);
@@ -99,7 +101,8 @@ module.exports = function(config, client) {
             res.render('error', {
             error_code: 500,
             error_text: "Why did you go to this URL? Normally an error message will be displayed here.",
-            title: 'Error'
+            description: 'Error',
+            url: config.url
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -113,7 +116,8 @@ module.exports = function(config, client) {
             res.render('error', {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
-                title: 'Error'
+                description: 'Error',
+                url: config.url
             })
         } catch (err) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
@@ -129,13 +133,15 @@ function renderErrorPage(req, res, err, client) {
         res.render('error', {
             error_code: 500,
             error_text: err,
-            title: 'Error'
+            description: 'Error',
+            url: config.url
         })
     } else {
         res.render('error', {
             error_code: 500,
             error_text: errorText,
-            title: 'Error'
+            description: 'Error',
+            url: config.url
         })
     }
 }
