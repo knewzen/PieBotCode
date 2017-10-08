@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pie Discord Bot</title>
+    <title>Pie Discord Bot</title>
+    <link rel="stylesheet" type="text/css" href="/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-<h1><%- error_code %> </h1>
-<p>Uh - oh it seems you have hit an error</p>
-<br>
-<%- error_text %>
+<section class="hero is-danger is-bold is-halfheight">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">
+                <span style="font-weight: 300">Error</span>&nbsp;<%- error_code %>
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="hero is-dark is-bold is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <p class="title is-6"><%- error_text %></p>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/js/count.js"></script>
 </body>
 </html>

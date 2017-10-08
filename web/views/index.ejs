@@ -2,13 +2,45 @@
 <html>
 <head>
     <title>Pie Discord Bot</title>
+    <link rel="stylesheet" type="text/css" href="/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-<h1>Hello Word</h1>
-Bot has been running for <%- botuptime %>
-<br>
-Has <%- guildamount %> guilds
-<br>
-Has <%- useramount %> users
+<section class="hero is-warning is-halfheight piebot-banner">
+    <div class="hero-body">
+        <div class="container">
+        <h1 class="title is-1">
+            <span style="font-weight: 300">Pie</span>Bot
+        </h1>
+        </div>
+    </div>
+</section>
+<section class="hero is-dark is-bold is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <p class="title"><strong>Bot Information</strong></p>
+            <br>
+
+            <nav class="columns">
+                <div class="column">
+                    <p class="heading"><strong>Total Servers</strong></p>
+                    <p class="title is-2 counter" class="counter" data-count="<%- guildamount %>">0</p>
+                </div>
+
+                <div class="column">
+                    <p class="heading"><strong>Total Users</strong></p>
+                    <p class="title is-2 counter" data-count="<%- useramount %>">0</p>
+                </div>
+
+                <div class="column">
+                    <p class="heading"><strong>Instance Uptime</strong></p>
+                    <p class="title is-2"><%- botuptime %></p>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/js/count.js"></script>
 </body>
 </html>

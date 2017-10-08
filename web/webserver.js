@@ -63,20 +63,18 @@ module.exports = function(config, client) {
     }
     let uptime = process.uptime();
 
-    client.shard.fetchClientValues('guilds.size').then(results => {
+/*    client.shard.fetchClientValues('guilds.size').then(results => {
         guildcount = results.reduce((prev, val) => prev + val, 0);
-    console.log(guildcount);
 });
 
     client.shard.fetchClientValues('users.size').then(results => {
         usercount = results.reduce((prev, val) => prev + val, 0);
-    console.log(usercount);
-});
+});*/
 
     res.render('index', {
         botuptime: format(uptime),
-        guildamount: guildcount,
-        useramount: usercount,
+        guildamount: /*guildcount*/client.guilds.size,
+        useramount: /*usercount*/client.users.size,
     })
 } catch (err) {
         renderErrorPage(res, err, client);
