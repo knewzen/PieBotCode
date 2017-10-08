@@ -1,8 +1,13 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({
+    autoreconnect: true
+});
+
 const settings = require('./settings.json');
 const prefix = 'p.'
 const fs = require('fs');
+const web = exports.web = require('./web/webserver');
+var shards = new Discord.ShardClientUtil(client);
 
 require('./util/eventLoader')(client);
 
@@ -45,3 +50,14 @@ exports.reload = reload;
 var regToken = /[\w\d]{24}.[\w\d]{6}.[\w\d-_]{27}/g;
 
 client.login(settings.token);
+
+if (shards.id < 1) {
+    try {
+        var config = settings
+        web(config, client);
+    } catch (err) {
+        console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
+    }
+} else {
+
+}
